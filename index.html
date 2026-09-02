@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - To-Do App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1>TaskFlow</h1>
+                <p>Organize your day, one task at a time.</p>
+            </div>
+
+            <button id="themeBtn" class="theme-btn" title="Toggle theme">
+                🌙
+            </button>
+        </header>
+
+
+        <!-- Current Time -->
+        <div class="current-time">
+            <span>Current Time</span>
+            <strong id="currentTime">--:--:--</strong>
+        </div>
+
+
+        <!-- Add Task -->
+        <section class="add-task">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you need to do?"
+                maxlength="100"
+                autocomplete="off"
+            >
+
+            <button id="addTaskBtn">
+                + Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total</span>
+                <strong id="totalTasks">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Active</span>
+                <strong id="activeTasks">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Completed</span>
+                <strong id="completedTasks">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search tasks..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <!-- Filters -->
+        <div class="filters">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="active">
+                Active
+            </button>
+
+            <button class="filter-btn" data-filter="completed">
+                Completed
+            </button>
+
+        </div>
+
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state">
+
+            <div class="empty-icon">📋</div>
+
+            <h3>No tasks found</h3>
+
+            <p>Add a task to get started.</p>
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            <span id="remainingText">
+                0 tasks remaining
+            </span>
+
+            <button id="clearCompleted">
+                Clear Completed
+            </button>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
